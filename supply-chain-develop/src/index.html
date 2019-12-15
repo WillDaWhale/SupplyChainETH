@@ -14,33 +14,79 @@
 
   <div id="banner">
   
-    <img src="image.jpg" width="1000" height="300" style="text-align: center;">
+    <img src="images/image.jpg" width="1000" height="300" style="text-align: center;">
 
   </div>
-   <div style="text-align: center;">
-    <label><b>Create Supply:</b></label>
-<input type="text" id="assetName" placeholder=" Supplier" required />
-<!-- <input type="text" id="assetDescription" placeholder="Description" required /> -->
-<input type="text" id="assetUuid" placeholder="SupplyID" required />
-<input type="text" id="assetDescription" placeholder="Description" required />
-<button id="createAsset">Create Supply</button>
+   
+
+
+<!-------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------->
+
+<div id="supplyBox">
+  <div class = "panel">
+    <div class="panel-heading">
+      <h3 class="panel-title">Supplier Use</h3>
+    </div>
+      <div style="text-align: center;">
+        <label><b>Create Supply:</b></label>
+        <br><input type="text" id="assetName" placeholder=" Supplier" required />
+        <!-- <input type="text" id="assetDescription" placeholder="Description" required /> -->
+        <br><input type="text" id="assetUuid" placeholder="SupplyID" required />
+        <br><input type="text" id="assetDescription" placeholder="Description" required />
+        <br><button class="btn btn-default btn-supplier" type="button" data-id="0">Create Supply</button>
+        <!-- <button id="createAsset">Create Supply</button> -->
+      </div>
+    </div>
+  </div>
 </div>
-<div style="text-align: center;">
-<label><b>Assign supply:</b></label>
-<input type="text" id="address" placeholder="Manufacturer" required />
-<!-- <input type="number" id="Uuid" placeholder="ManufacturerID" required /> -->
-<input type="text" id="Uuid" placeholder="SupplyID" required />
-<input type="text" id="Uuid" placeholder="ProductID" required />
-<input type="text" id="Uuid" placeholder="Product Description" required />
-<button id="transferAsset">Assign Supply</button>
+
+
+<div id="supplyBox">
+  <div class = "panel">
+    <div class="panel-heading">
+      <h3 class="panel-title">Producer Use</h3>
+    </div>
+      <div style="text-align: center;">
+        <label><b>Assign supply:</b></label>
+        <br><input type="text" id="address" placeholder="Manufacturer" required />
+        <!-- <input type="number" id="Uuid" placeholder="ManufacturerID" required /> -->
+        <br><input type="text" id="Uuid" placeholder="SupplyID" required />
+        <br><input type="text" id="Uuid" placeholder="ProductID" required />
+        <br><input type="text" id="Uuid" placeholder="Product Description" required />
+
+        <br><button class="btn btn-default btn-producer" type="button" data-id="0">Assign Supply</button>
+        <!-- <button id="transferAsset">Assign Supply</button> -->
+      </div>
+    </div>
+  </div>
 </div>
-<div style="text-align: center;">
-<label><b>Track Product Details:</b></label>
-<!-- <input type="number" id="trackUuid" placeholder="Product ID" required /> -->
-<input type="text" id="trackUuid" placeholder="Product ID" required />
-<button id="trackAsset">Track Product Details</button>
+
+
+
+<div id="supplyBox">
+  <div class = "panel">
+    <div class="panel-heading">
+      <h3 class="panel-title">Consumer Use</h3>
+    </div>
+      <div style="text-align: center;">
+
+        <label><b>Track Product Details:</b></label>
+        <!-- <input type="number" id="trackUuid" placeholder="Product ID" required /> -->
+        <br><input type="text" id="trackUuid" placeholder="Product ID" required />
+
+        <br><button class="btn btn-default btn-consumer" type="button" data-id="0">Track Product</button>
+        <!-- <button id="trackAsset">Track Product Details</button> -->
+      </div>
+    </div>
+  </div>
 </div>
-</br>
+
+
+
+
+
 <div id = "response" style="text-align: center;">
 <p><b>ProductID:</b><span id="name">T1 Bicycle</span></p>
 <p><b>Product Description:</b><span id="description">Toronto Steel; Toronto Plastics</span></p>
@@ -49,10 +95,10 @@
 </div>
 <hr>
 <div id="log" style="text-align: center;"></div>
- <link rel="stylesheet" href="index.css">
-<script src="web3.min.js"></script>
+ <link rel="stylesheet" href="css/index.css">
+<script src="css/web3.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src= "index.js"></script>
+<script src= "css/index.js"></script>
 </body>
 <footer style="text-align: right;">
 <h6>&copy Wang&Xu </h6>
