@@ -37,6 +37,8 @@ contract SupplyChain {
 
     // Supplier functions
     function uploadSupply(string memory supplier, string memory _supplyName, string memory supplyID) public returns(string memory){
+        require(!Supplies[supplyID].exist, "Component Already Exist!");
+
         Supplies[supplyID].supplyName = _supplyName;
         Supplies[supplyID].supplierName = supplier;
 

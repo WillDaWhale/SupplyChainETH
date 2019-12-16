@@ -1,0 +1,367 @@
+{
+  "contractName": "Seriality",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/Seriality.sol\":\"Seriality\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/BytesToTypes.sol\":{\"keccak256\":\"0x6c625c7cd0fb4cbe58a949be1b497cb6ddbd8b16f9e2081f9bc253851d55e964\",\"urls\":[\"bzz-raw://770ae3cfe579061f8050079a76f4bc28f1f127f2263368569e817b45f2532838\",\"dweb:/ipfs/Qmcpkh454GGGE8Hc9dHZDMsymAsUssCTdQa4uukW5ou2jp\"]},\"/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/Seriality.sol\":{\"keccak256\":\"0xc6d4442a442093dad22674f47249e2e714aefd54bfefd8b1493b1ead801b0c63\",\"urls\":[\"bzz-raw://c46af9eb376da81a3f6ce2c1a0929d7d16c6b29344ff2411efa795d9998d0b5a\",\"dweb:/ipfs/Qma4rhS35gtjmzp2g4NHpUcKju1nC9KQLEQLmB4hHrZCZQ\"]},\"/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/SizeOf.sol\":{\"keccak256\":\"0x842b2ebadff0cbafa16bb2f57f258d2cc1560fbbdf2d3bd0c5f7acd61ae51e3f\",\"urls\":[\"bzz-raw://1698c21ac680e6a95c77e0bcbcd1303b91a9be0cbc08ec2b9c44471469a1a53d\",\"dweb:/ipfs/QmPy5hz5F8XsdM61GhQFfcu5UjJPHRVbxQ2ncocWPx4Bap\"]},\"/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/TypesToBytes.sol\":{\"keccak256\":\"0xb66759d5a5f03af55aab1b464e12a283b34c60f2a0a27e68e3657d6c5b0bb256\",\"urls\":[\"bzz-raw://d21532dabf235e6b0d2a44120a93c0c3aceb7e42e0fb6b6b308398ef7e8773a0\",\"dweb:/ipfs/QmdaznTgiNAfFzC1sLFr3JNbrtRZxKE4zaUbuQFeWKRTsn\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582057214f7575ab9f72aed3c52c541d7ca158b4d069b40af740d0431ef79be5b26c64736f6c634300050c0032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582057214f7575ab9f72aed3c52c541d7ca158b4d069b40af740d0431ef79be5b26c64736f6c634300050c0032",
+  "sourceMap": "289:95:2:-;;;353:29;8:9:-1;5:2;;;30:1;27;20:12;5:2;353:29:2;289:95;;;;;;",
+  "deployedSourceMap": "289:95:2:-;;;;;",
+  "source": "pragma solidity ^0.5.0;\n\n/**\n * @title Seriality\n * @dev The Seriality contract is the main interface for serializing data using the TypeToBytes, BytesToType and SizeOf\n * @author pouladzade@gmail.com\n */\n \nimport \"./BytesToTypes.sol\";\nimport \"./TypesToBytes.sol\";\nimport \"./SizeOf.sol\";\n\ncontract Seriality is BytesToTypes, TypesToBytes, SizeOf {\n\n    constructor() public {\n\n    }\n}\n",
+  "sourcePath": "E:/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/Seriality.sol",
+  "ast": {
+    "absolutePath": "/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/Seriality.sol",
+    "exportedSymbols": {
+      "Seriality": [
+        852
+      ]
+    },
+    "id": 853,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 838,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "absolutePath": "/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/BytesToTypes.sol",
+        "file": "./BytesToTypes.sol",
+        "id": 839,
+        "nodeType": "ImportDirective",
+        "scope": 853,
+        "sourceUnit": 780,
+        "src": "207:28:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/TypesToBytes.sol",
+        "file": "./TypesToBytes.sol",
+        "id": 840,
+        "nodeType": "ImportDirective",
+        "scope": 853,
+        "sourceUnit": 1360,
+        "src": "236:28:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/SizeOf.sol",
+        "file": "./SizeOf.sol",
+        "id": 841,
+        "nodeType": "ImportDirective",
+        "scope": 853,
+        "sourceUnit": 929,
+        "src": "265:22:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 842,
+              "name": "BytesToTypes",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 779,
+              "src": "311:12:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_BytesToTypes_$779",
+                "typeString": "contract BytesToTypes"
+              }
+            },
+            "id": 843,
+            "nodeType": "InheritanceSpecifier",
+            "src": "311:12:2"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 844,
+              "name": "TypesToBytes",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1359,
+              "src": "325:12:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TypesToBytes_$1359",
+                "typeString": "contract TypesToBytes"
+              }
+            },
+            "id": 845,
+            "nodeType": "InheritanceSpecifier",
+            "src": "325:12:2"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 846,
+              "name": "SizeOf",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 928,
+              "src": "339:6:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SizeOf_$928",
+                "typeString": "contract SizeOf"
+              }
+            },
+            "id": 847,
+            "nodeType": "InheritanceSpecifier",
+            "src": "339:6:2"
+          }
+        ],
+        "contractDependencies": [
+          779,
+          928,
+          1359
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 852,
+        "linearizedBaseContracts": [
+          852,
+          928,
+          1359,
+          779
+        ],
+        "name": "Seriality",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 850,
+              "nodeType": "Block",
+              "src": "374:8:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 851,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 848,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "364:2:2"
+            },
+            "returnParameters": {
+              "id": 849,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "374:0:2"
+            },
+            "scope": 852,
+            "src": "353:29:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 853,
+        "src": "289:95:2"
+      }
+    ],
+    "src": "0:385:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/Seriality.sol",
+    "exportedSymbols": {
+      "Seriality": [
+        852
+      ]
+    },
+    "id": 853,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 838,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "absolutePath": "/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/BytesToTypes.sol",
+        "file": "./BytesToTypes.sol",
+        "id": 839,
+        "nodeType": "ImportDirective",
+        "scope": 853,
+        "sourceUnit": 780,
+        "src": "207:28:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/TypesToBytes.sol",
+        "file": "./TypesToBytes.sol",
+        "id": 840,
+        "nodeType": "ImportDirective",
+        "scope": 853,
+        "sourceUnit": 1360,
+        "src": "236:28:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/E/Uniwork Toronto/Fall/APS1050 Blockchain/Project/supply-chain-develop/contracts/SizeOf.sol",
+        "file": "./SizeOf.sol",
+        "id": 841,
+        "nodeType": "ImportDirective",
+        "scope": 853,
+        "sourceUnit": 929,
+        "src": "265:22:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 842,
+              "name": "BytesToTypes",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 779,
+              "src": "311:12:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_BytesToTypes_$779",
+                "typeString": "contract BytesToTypes"
+              }
+            },
+            "id": 843,
+            "nodeType": "InheritanceSpecifier",
+            "src": "311:12:2"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 844,
+              "name": "TypesToBytes",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1359,
+              "src": "325:12:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TypesToBytes_$1359",
+                "typeString": "contract TypesToBytes"
+              }
+            },
+            "id": 845,
+            "nodeType": "InheritanceSpecifier",
+            "src": "325:12:2"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 846,
+              "name": "SizeOf",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 928,
+              "src": "339:6:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SizeOf_$928",
+                "typeString": "contract SizeOf"
+              }
+            },
+            "id": 847,
+            "nodeType": "InheritanceSpecifier",
+            "src": "339:6:2"
+          }
+        ],
+        "contractDependencies": [
+          779,
+          928,
+          1359
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 852,
+        "linearizedBaseContracts": [
+          852,
+          928,
+          1359,
+          779
+        ],
+        "name": "Seriality",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 850,
+              "nodeType": "Block",
+              "src": "374:8:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 851,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 848,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "364:2:2"
+            },
+            "returnParameters": {
+              "id": 849,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "374:0:2"
+            },
+            "scope": 852,
+            "src": "353:29:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 853,
+        "src": "289:95:2"
+      }
+    ],
+    "src": "0:385:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.18",
+  "updatedAt": "2019-12-15T22:34:21.577Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
