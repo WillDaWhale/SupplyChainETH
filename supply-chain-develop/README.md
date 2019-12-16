@@ -1,7 +1,6 @@
-# Pet Shop Truffle Box
+# Supply Chain Tracking System using Blockchain technology
 
-This box has all you need to get started with our [Pet Shop tutorial](http://truffleframework.com/tutorials/pet-shop).
-
+This box has all you need to get started with our Supply Chain Tracking System
 ## Installation
 
 1. Install Truffle globally.
