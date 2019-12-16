@@ -10,13 +10,13 @@ This box has all you need to get started with our Supply Chain Tracking System
 
 2. Clone the repo or download it. This also takes care of installing the necessary dependencies.
     ```javascript
-    git clone "the link on the right top side of the webside"
+    git clone https://github.com/WillDaWhale/SupplyChainETH.git
     ```
 
 
 3. Compile and migrate the smart contracts, then run the test
     ```javascript
-    truffle migrate
+    truffle migrate --reset
     truffle test
     ```
 
