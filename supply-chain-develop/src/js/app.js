@@ -3,22 +3,6 @@ App = {
   contracts: {},
 
   init: async function() {
-    // Load pets.
-    // $.getJSON('../pets.json', function(data) {
-    //   var petsRow = $('#petsRow');
-    //   var petTemplate = $('#petTemplate');
-
-    //   for (i = 0; i < data.length; i ++) {
-    //     petTemplate.find('.panel-title').text(data[i].name);
-    //     petTemplate.find('img').attr('src', data[i].picture);
-    //     petTemplate.find('.pet-breed').text(data[i].breed);
-    //     petTemplate.find('.pet-age').text(data[i].age);
-    //     petTemplate.find('.pet-location').text(data[i].location);
-    //     petTemplate.find('.btn-adopt').attr('data-id', data[i].id);
-
-    //     petsRow.append(petTemplate.html());
-    //   }
-    // });
 
     return await App.initWeb3();
   },
@@ -70,30 +54,12 @@ App = {
     $(document).on('click', '.btn-consumer', App.handleSearch);
   },
 
-  // markAdopted: function(adopters, account) {
-  //   var adoptionInstance;
-
-  //   App.contracts.Adoption.deployed().then(function(instance) {
-  //     adoptionInstance = instance;
-    
-  //     return adoptionInstance.getAdopters.call();
-  //   }).then(function(adopters) {
-  //     for (i = 0; i < adopters.length; i++) {
-  //       if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-  //         $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
-  //       }
-  //     }
-  //   }).catch(function(err) {
-  //     console.log(err.message);
-  //   });
-  // },
-
   handleSupply: function(event) {
     event.preventDefault();
 
     // var petId = parseInt($(event.target).data('id'));
     var supplier = document.getElementById('supplier').value;
-    var supplyID = document.getElementById('supplyid').value;;
+    var supplyID = document.getElementById('supplyid').value;
     var supply = document.getElementById('supplyDes').value;
 
     var SupplyChainInstance;
@@ -123,7 +89,7 @@ App = {
 
     // var petId = parseInt($(event.target).data('id'));
     var producer = document.getElementById('producer').value;
-    var componentid = document.getElementById('componentid').value;;
+    var componentid = document.getElementById('componentid').value;
     var productid = document.getElementById('productid').value;
     var productdes = document.getElementById('productdes').value;
 
@@ -169,18 +135,14 @@ App = {
         SupplyChainInstance = instance;
         return searchResult = SupplyChainInstance.getProductInfo(productid4search);
       }).then(function(searchResult){
-        // // $('.supply-panel').find('button').text('"'+ productid + '" is successfully assigned. Click to do another one!');
+        
         document.getElementById('name').innerHTML = (productid4search);
         document.getElementById('description').innerHTML = (searchResult[0] + " / Total Components: " + searchResult[2]);
         document.getElementById('manufacturer').innerHTML = (searchResult[1]);
-        // if (a[0] == ""){
-        //   $('.consumer-panel').find('button').text("1");
-        // }else if (a[0] == " "){
-        //   $('.consumer-panel').find('button').text("2");
-        // }else{
-        //   $('.consumer-panel').find('button').text(a[0]);
-        // }
-        document.getElementById('location').innerHTML = (searchResult[3]+"/"+searchResult[5]);
+        document.getElementById('supplier').innerHTML = (searchResult[6]);
+        
+      }).then(function(){
+        $('.consumer-panel').find('button').text('Product details are shown below. Click to search another one!');
       }).catch(function(err) {
         console.log(err.message);
       });
